@@ -1,7 +1,7 @@
-import { initContract } from "@ts-rest/core";
-import { signInContract } from "./sign-in.contract";
+import { initContract } from '@ts-rest/core';
+import { signInContract } from './sign-in.contract';
 
-export * from "./schemas";
+export * from './schemas';
 
 const c = initContract();
 

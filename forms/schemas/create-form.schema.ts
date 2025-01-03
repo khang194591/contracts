@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 export const CreateFormSchema = z.object({
   name: z.string(),
@@ -13,6 +13,6 @@ export const CreateFormSchema = z.object({
       type: z.string(),
       required: z.boolean().optional(),
       options: z.array(z.string()).optional(),
-    })
+    }),
   ),
 });

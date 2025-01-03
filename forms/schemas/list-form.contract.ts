@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { z } from 'zod';
 
-export const GetListFormSchema = z.object({
+export const ListFormResponseSchema = z.object({
   items: z.array(
     z.object({
       id: z.coerce.number(),
@@ -9,6 +9,6 @@ export const GetListFormSchema = z.object({
       isTemplate: z.boolean(),
       responseEditable: z.boolean(),
       multipleResponse: z.boolean(),
-    })
+    }),
   ),
 });
