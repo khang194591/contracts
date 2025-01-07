@@ -1,5 +1,5 @@
-import { FieldType, FormStatus } from '@prisma/client';
 import { z } from 'zod';
+import { FieldType, FormStatus } from '../form.enum';
 
 export const CreateFormSchema = z.object({
   name: z.string(),

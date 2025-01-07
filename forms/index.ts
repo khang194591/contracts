@@ -7,6 +7,8 @@ import {
   UpdateFormSchema,
 } from './schemas';
 
+export * from './form.enum';
+
 const c = initContract();
 
 export const formsContract = c.router({
