@@ -1,5 +1,5 @@
-import { z } from 'zod';
-import { PaginationResponseSchema } from '~/contracts/common';
+import { z } from "zod";
+import { PaginationResponseSchema } from "../../common";
 
 export const ListFormResponseSchema = PaginationResponseSchema.extend({
   items: z.array(
@@ -10,12 +10,12 @@ export const ListFormResponseSchema = PaginationResponseSchema.extend({
       isTemplate: z.boolean(),
       responseEditable: z.boolean(),
       multipleResponse: z.boolean(),
-    }),
+    })
   ),
   formTemplates: z.array(
     z.object({
       id: z.coerce.number(),
       name: z.string(),
-    }),
+    })
   ),
 });
