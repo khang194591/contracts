@@ -1,6 +1,8 @@
 import { initContract } from '@ts-rest/core';
 import { IdNumberSchema, PaginationQuerySchema } from '../common';
 import {
+  FormTemplateResSchema,
+  CreateFormDataSchema,
   CreateFormSchema,
   FormPathSchema,
   ListFormResponseSchema,
@@ -12,6 +14,13 @@ export * from './form.enum';
 const c = initContract();
 
 export const formsContract = c.router({
+  createFormData: {
+    method: 'GET',
+    path: '/forms/create',
+    pathParams: CreateFormDataSchema,
+    responses: { 200: FormTemplateResSchema },
+    summary: 'Get create form data',
+  },
   createForm: {
     method: 'POST',
     path: '/forms',
