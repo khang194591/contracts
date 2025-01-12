@@ -7,6 +7,7 @@ import {
   FormPathSchema,
   ListFormResponseSchema,
   UpdateFormSchema,
+  GetFormResponseSchema,
 } from './schemas';
 
 export * from './form.enum';
@@ -17,7 +18,7 @@ export const formsContract = c.router({
   createFormData: {
     method: 'GET',
     path: '/forms/create',
-    pathParams: CreateFormDataSchema,
+    query: CreateFormDataSchema,
     responses: { 200: FormTemplateResSchema },
     summary: 'Get create form data',
   },
@@ -47,7 +48,7 @@ export const formsContract = c.router({
     method: 'GET',
     path: '/forms/:formId',
     pathParams: FormPathSchema,
-    responses: { 200: IdNumberSchema },
+    responses: { 200: GetFormResponseSchema },
     summary: 'Get a form',
   },
   deleteForm: {
