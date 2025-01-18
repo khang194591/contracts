@@ -11,6 +11,7 @@ import {
 } from './schemas';
 
 export * from './form.enum';
+export * from './schemas';
 
 const c = initContract();
 
