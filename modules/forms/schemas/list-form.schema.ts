@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { PaginationResponseSchema } from '../../common';
+import { PaginationResponseSchema } from '../../../common';
 
 export const ListFormResponseSchema = PaginationResponseSchema.extend({
   items: z.array(

@@ -1,14 +1,12 @@
 import { initContract } from '@ts-rest/core';
-import { authContract } from './auth';
-import { formsContract } from './forms';
+import { formsContract } from './modules';
+
+export * from './modules';
 
 export const APP_NAME = 'KTD';
 
 const c = initContract();
 
-export * from './forms';
-
 export const contract = c.router({
-  auth: authContract,
   forms: formsContract,
 });

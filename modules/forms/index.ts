@@ -1,5 +1,5 @@
 import { initContract } from '@ts-rest/core';
-import { IdNumberSchema, PaginationQuerySchema } from '../common';
+import { IdNumberSchema, PaginationQuerySchema } from '../../common';
 import {
   FormTemplateResSchema,
   CreateFormDataSchema,
